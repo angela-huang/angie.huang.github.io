@@ -1,6 +1,6 @@
 window.data = {
   "logo": {
-    "cn": "我是黄安吉",
+    "cn": "中山市蓝藻生物食品开发有限公司",
     "en": "Zhongshan Blue Algae Biological Food Development Co.Ltd"
   },
 
