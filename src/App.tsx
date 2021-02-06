@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ConfigProvider, Row, Col, Card, Image, Carousel, Dropdown, Menu } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
-import axios from 'axios';
+// import axios from 'axios';
 import enUS from 'antd/es/locale/en_US';
 import zhCN from 'antd/es/locale/zh_CN';
 import './App.css';
@@ -10,7 +10,6 @@ import './typo.css';
 import Logo from './images/logo.png';
 import Meta from 'antd/lib/card/Meta';
 import MultipleEllipsis from './MultipleEllipsis';
-
 
 const imgList = (data: any) => {
   if (!data) {
@@ -27,9 +26,7 @@ const App = () => {
   const [data, setData] = useState<any>();
   const [lang, setLang] = useState<string>('en');
   useEffect(() => {
-    axios.get('/mock.json').then((res) => {
-      setData(res.data);
-    })
+    setData((window as any).data);
   }, []);
 
   const menu = () => (<Menu onClick={(e: any) => setLang(e.key)}>

@@ -13,14 +13,17 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
+    "roadhog": "^0.6.1",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +45,10 @@
   },
   "devDependencies": {
     "antd": "^4.12.2",
-    "axios": "^0.21.1"
-  }
+    "axios": "^0.21.1",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^3.1.0",
+    "roadhog-api-doc": "^1.1.2"
+  },
+  "homepage": "https://angela-huang.github.io/angie.huang.github.io/"
 }
