@@ -1,19 +1,21 @@
 {
   "files": {
     "main.css": "/angie.huang.github.io/static/css/main.6ae9734f.chunk.css",
-    "main.js": "/angie.huang.github.io/static/js/main.5740347d.chunk.js",
-    "main.js.map": "/angie.huang.github.io/static/js/main.5740347d.chunk.js.map",
-    "runtime-main.js": "/angie.huang.github.io/static/js/runtime-main.1de02972.js",
-    "runtime-main.js.map": "/angie.huang.github.io/static/js/runtime-main.1de02972.js.map",
-    "static/css/2.ca88fbcd.chunk.css": "/angie.huang.github.io/static/css/2.ca88fbcd.chunk.css",
-    "static/js/2.9e71110d.chunk.js": "/angie.huang.github.io/static/js/2.9e71110d.chunk.js",
-    "static/js/2.9e71110d.chunk.js.map": "/angie.huang.github.io/static/js/2.9e71110d.chunk.js.map",
-    "static/js/3.764fc565.chunk.js": "/angie.huang.github.io/static/js/3.764fc565.chunk.js",
-    "static/js/3.764fc565.chunk.js.map": "/angie.huang.github.io/static/js/3.764fc565.chunk.js.map",
+    "main.js": "/angie.huang.github.io/static/js/main.fb3322de.chunk.js",
+    "main.js.map": "/angie.huang.github.io/static/js/main.fb3322de.chunk.js.map",
+    "mock.js": "/angie.huang.github.io/static/js/mock.9518a970.chunk.js",
+    "mock.js.map": "/angie.huang.github.io/static/js/mock.9518a970.chunk.js.map",
+    "runtime-main.js": "/angie.huang.github.io/static/js/runtime-main.77bf10b9.js",
+    "runtime-main.js.map": "/angie.huang.github.io/static/js/runtime-main.77bf10b9.js.map",
+    "static/css/3.ca88fbcd.chunk.css": "/angie.huang.github.io/static/css/3.ca88fbcd.chunk.css",
+    "static/js/3.f638b090.chunk.js": "/angie.huang.github.io/static/js/3.f638b090.chunk.js",
+    "static/js/3.f638b090.chunk.js.map": "/angie.huang.github.io/static/js/3.f638b090.chunk.js.map",
+    "static/js/4.d6fc9c38.chunk.js": "/angie.huang.github.io/static/js/4.d6fc9c38.chunk.js",
+    "static/js/4.d6fc9c38.chunk.js.map": "/angie.huang.github.io/static/js/4.d6fc9c38.chunk.js.map",
     "index.html": "/angie.huang.github.io/index.html",
-    "static/css/2.ca88fbcd.chunk.css.map": "/angie.huang.github.io/static/css/2.ca88fbcd.chunk.css.map",
+    "static/css/3.ca88fbcd.chunk.css.map": "/angie.huang.github.io/static/css/3.ca88fbcd.chunk.css.map",
     "static/css/main.6ae9734f.chunk.css.map": "/angie.huang.github.io/static/css/main.6ae9734f.chunk.css.map",
-    "static/js/2.9e71110d.chunk.js.LICENSE.txt": "/angie.huang.github.io/static/js/2.9e71110d.chunk.js.LICENSE.txt",
+    "static/js/3.f638b090.chunk.js.LICENSE.txt": "/angie.huang.github.io/static/js/3.f638b090.chunk.js.LICENSE.txt",
     "static/media/advance-bg.jpg": "/angie.huang.github.io/static/media/advance-bg.8599afd9.jpg",
     "static/media/advance01.jpg": "/angie.huang.github.io/static/media/advance01.abce164d.jpg",
     "static/media/advance02.jpg": "/angie.huang.github.io/static/media/advance02.06ae8b4b.jpg",
@@ -53,10 +55,10 @@
     "static/media/typo.css": "/angie.huang.github.io/static/media/tpl.e3323aab.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.1de02972.js",
-    "static/css/2.ca88fbcd.chunk.css",
-    "static/js/2.9e71110d.chunk.js",
+    "static/js/runtime-main.77bf10b9.js",
+    "static/css/3.ca88fbcd.chunk.css",
+    "static/js/3.f638b090.chunk.js",
     "static/css/main.6ae9734f.chunk.css",
-    "static/js/main.5740347d.chunk.js"
+    "static/js/main.fb3322de.chunk.js"
   ]
 }
