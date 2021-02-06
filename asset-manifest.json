@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/angie.huang.github.io/static/css/main.6ae9734f.chunk.css",
-    "main.js": "/angie.huang.github.io/static/js/main.fb3322de.chunk.js",
-    "main.js.map": "/angie.huang.github.io/static/js/main.fb3322de.chunk.js.map",
+    "main.js": "/angie.huang.github.io/static/js/main.4c0e0071.chunk.js",
+    "main.js.map": "/angie.huang.github.io/static/js/main.4c0e0071.chunk.js.map",
     "mock.js": "/angie.huang.github.io/static/js/mock.9518a970.chunk.js",
     "mock.js.map": "/angie.huang.github.io/static/js/mock.9518a970.chunk.js.map",
     "runtime-main.js": "/angie.huang.github.io/static/js/runtime-main.77bf10b9.js",
@@ -59,6 +59,6 @@
     "static/css/3.ca88fbcd.chunk.css",
     "static/js/3.f638b090.chunk.js",
     "static/css/main.6ae9734f.chunk.css",
-    "static/js/main.fb3322de.chunk.js"
+    "static/js/main.4c0e0071.chunk.js"
   ]
 }
