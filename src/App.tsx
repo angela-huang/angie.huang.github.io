@@ -24,7 +24,7 @@ const ingredientIcons = ['protein', 'essential', 'carotene', 'ylinolenicacid'];
 
 const App = () => {
   const [data, setData] = useState<any>();
-  const [lang, setLang] = useState<string>('en');
+  const [lang, setLang] = useState<string>('cn');
   useEffect(() => {
     setData((window as any).data);
   }, []);
