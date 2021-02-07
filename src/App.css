@@ -261,6 +261,12 @@ h1, h3 {
 .advance-list .item:nth-child(odd) dt {
   text-align: right;
 }
+.advance-list .item:nth-child(odd) dl {
+  margin-right: 0;
+}
+.advance-list .item:nth-child(odd) dt {
+  margin-right: 30px;
+}
 .advance-list .figure {
   display: flex;
   align-items: top;
@@ -358,7 +364,7 @@ h1, h3 {
   padding-left: 5px;
   color: inherit;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
 }
 @media (max-width: 991px) {
   .pro {
