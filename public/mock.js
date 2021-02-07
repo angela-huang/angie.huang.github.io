@@ -4,16 +4,6 @@ window.data = {
     "en": "Zhongshan Blue Algae Biological Food Development Co.Ltd"
   },
 
-  "chinese": {
-    "cn": "中文",
-    "en": "中文"
-  },
-
-  "english": {
-    "cn": "英文",
-    "en": "英文"
-  },
-
   "banner": {
     "title": {
       "cn": "天普乐螺旋藻生物食品",

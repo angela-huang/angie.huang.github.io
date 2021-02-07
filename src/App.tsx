@@ -31,10 +31,10 @@ const App = () => {
 
   const menu = () => (<Menu onClick={(e: any) => setLang(e.key)}>
     <Menu.Item key="cn">
-      {data?.chinese?.[lang]}
+      中文
     </Menu.Item>
     <Menu.Item key="en">
-      {data?.english?.[lang]}
+      English
     </Menu.Item>
   </Menu>);
 
@@ -47,7 +47,7 @@ const App = () => {
           <Dropdown overlay={menu} className="fr select-lang">
             <span>
               {
-                lang === 'en' ? data?.english?.[lang] : data?.chinese?.[lang]
+                lang === 'en' ? 'English' : '中文'
               }
               <DownOutlined className="ml-xs" />
             </span>
@@ -91,12 +91,16 @@ const App = () => {
           <Row className="pro-list" gutter={60}>
             {
               data?.productLists?.map((item: any, index: number) => <Col key={index} lg={{ span: 8 }} xs={{ span: 24 }}>
+                <div className="item">
                 <Card
                   bordered={false}
-                  cover={<img alt="example" height={342} src={imgList(item.imgName)} />}
+                  cover={<img alt="example" width="100%" src={imgList(item.imgName)} />}
                 >
-                  <Meta title={<div className="fs-24">{item?.title?.[lang]}</div>} description={<div className="fs-18">{item?.info?.[lang]}</div>} />
+                  <Meta 
+                  title={<div className="fs-20">{item?.title?.[lang]}</div>} 
+                  description={<div className="fs-16">{item?.info?.[lang]}</div>} />
                 </Card>
+                </div>
               </Col>)
             }
 
@@ -202,7 +206,7 @@ const App = () => {
           <div className="culture-list">
             <div className="info">{data?.identificationInfo?.[lang]}</div>
             <Row className="renzheng-list">
-              <Col lg={{ span: 16 }} xs={{ span: 24 }}>
+              <Col lg={{ span: 18 }} xs={{ span: 24 }}>
 
                 <Image.PreviewGroup>
 
@@ -220,8 +224,8 @@ const App = () => {
                 </Image.PreviewGroup>
 
               </Col>
-              <Col lg={{ span: 8 }} xs={{ span: 24 }} className="text-center">
-                <img alt="example" height={436} src={imgList(data?.identificationImgNames?.[data?.identificationImgNames?.length - 1])} />
+              <Col lg={{ span: 6 }} xs={{ span: 24 }} className="text-center">
+                <img alt="example" height={375} src={imgList(data?.identificationImgNames?.[data?.identificationImgNames?.length - 1])} />
               </Col>
             </Row>
 
@@ -234,6 +238,7 @@ const App = () => {
           <h1>{data?.cultureTitle?.[lang]}</h1>
           <div className="culture-list">
             <div className="info">{data?.cultureInfo?.[lang]}</div>
+            <div className="pt-30">
             <Image.PreviewGroup>
               <Row gutter={[20, 20]}>
                 {data?.cultureImgNames?.map((item: any) => <Col key={item} span={6}>
@@ -245,6 +250,7 @@ const App = () => {
 
               </Row>
             </Image.PreviewGroup>
+            </div>
           </div>
         </div>
       </div>
