@@ -1,7 +1,6 @@
 @import '~antd/dist/antd.css';
 
 html {
-  overflow-x: hidden;
   font-size: 10px;
 }
 a {
@@ -22,6 +21,9 @@ h1, h3 {
 }
 .text-center {
   text-align: center;
+}
+.text-left {
+  text-align: left;
 }
 .fl {
   float: left;
@@ -55,27 +57,53 @@ h1, h3 {
 .company-section {
   text-align: center;
 }
+.company-img-slide {
+  position: relative;
+}
+.company-img-slide .btn {
+  position: absolute;
+  top: 50%;
+  font-family: simsun;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ddd;
+}
+.company-img-slide .btn:hover {
+  color: #40811F;
+}
+.btn.prev {
+  left: -30px;
+}
+.btn.next {
+  right: -30px;
+}
 .company-list {
-  padding-bottom: 44px;
+  padding-bottom: 30px;
   max-width: 1028px;
   margin: 0 auto;
+}
+.company-list .slick-list {
+  border-radius: 10px;
 }
 .company-list .slick-dots {
   bottom: -10px;
   
 }
+.company-list .slick-dots li {
+  margin: 0 6px;
+}
 .company-list .slick-dots li,
 .company-list .slick-dots li button {
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   background: #D8D8D8;
   border-radius: 50%;
 }
 .company-list .slick-dots li.slick-active {
-  width: 14px;
+  width: 8px;
 }
 .company-list .slick-dots li.slick-active button {
-  width: 14px;
+  width: 8px;
   background: #40811F;
 }
 .banner {
@@ -107,6 +135,8 @@ h1, h3 {
 .banner-text {
   margin: 80px 0;
   min-height: 250px;
+  display: flex;
+  align-items: center;
 }
 .banner-text * {
   margin: 0;
@@ -227,13 +257,18 @@ h1, h3 {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin-top: 50px;
+  overflow: hidden;
 }
 
 
 .pro-list .ant-card-body {
   padding: 38px;
-  height: 238px;
+  height: 155px;
   overflow: hidden;
+  
+}
+.pro-list .item:hover .ant-card {
+  box-shadow: 0px 64px 120px -40px rgb(0 0 0 / 16%);
   
 }
 
@@ -319,6 +354,10 @@ h1, h3 {
   font-size: 1.6rem;
   line-height: 28px;
   padding:  10px 0;
+}
+.culture-section .ant-image {
+  border-radius: 3px;
+  overflow: hidden;
 }
 .contact {
   padding: 80px;

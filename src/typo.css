@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'tpl';
-  src:  url('fonts/tpl.eot?agry6q');
-  src:  url('fonts/tpl.eot?agry6q#iefix') format('embedded-opentype'),
-    url('fonts/tpl.ttf?agry6q') format('truetype'),
-    url('fonts/tpl.woff?agry6q') format('woff'),
-    url('fonts/tpl.svg?agry6q#tpl') format('svg');
+  src:  url('fonts/tpl.eot?rgx78w');
+  src:  url('fonts/tpl.eot?rgx78w#iefix') format('embedded-opentype'),
+    url('fonts/tpl.ttf?rgx78w') format('truetype'),
+    url('fonts/tpl.woff?rgx78w') format('woff'),
+    url('fonts/tpl.svg?rgx78w#tpl') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevron-left:before {
+  content: "\e916";
+}
+.icon-chevron-right:before {
+  content: "\e917";
+}
 .icon-essential:before {
   content: "\e900";
 }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { ConfigProvider, Row, Col, Card, Image, Carousel, Dropdown, Menu } from 'antd';
+import React, { useEffect, useRef, useState } from 'react';
+import { ConfigProvider, Row, Col, Card, Image, Carousel, Dropdown, Menu, Button } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 // import axios from 'axios';
 import enUS from 'antd/es/locale/en_US';
@@ -25,6 +25,7 @@ const ingredientIcons = ['protein', 'essential', 'carotene', 'ylinolenicacid'];
 const App = () => {
   const [data, setData] = useState<any>();
   const [lang, setLang] = useState<string>('cn');
+  const companyRef = useRef<any>(null);
   useEffect(() => {
     setData((window as any).data);
   }, []);
@@ -43,7 +44,7 @@ const App = () => {
     <div className="app">
       <div className="banner">
         <div className="clearfix w1440">
-          <a className="logo fl" href="/"><img src={Logo} alt="天普乐" /><span className="fs-24">{data?.logo?.[lang]}</span></a>
+          <a className="logo fl" href="/"><img src={Logo} alt="天普乐" height="58" /><span className="fs-24">{data?.logo?.[lang]}</span></a>
           <Dropdown overlay={menu} className="fr select-lang">
             <span>
               {
@@ -54,9 +55,11 @@ const App = () => {
           </Dropdown>
         </div>
         <div className="banner-text w1440">
-          <h1>{data?.banner?.title?.[lang]}<span className="border"></span></h1>
+          <div>
+            <h1>{data?.banner?.title?.[lang]}<span className="border"></span></h1>
 
-          <h3>{data?.banner?.subTitle?.[lang]}</h3>
+            <h3>{data?.banner?.subTitle?.[lang]}</h3>
+          </div>
         </div>
       </div>
       <Row className="process w1440" gutter={0}>
@@ -74,12 +77,17 @@ const App = () => {
         <div className="w1440">
           <h1>{data?.companyTitle?.[lang]}</h1>
           <div className="culture-list">
-            <div className="info">{data?.companyInfo?.[lang]}</div>
-            <Carousel autoplay dots={true} className="company-list">
+            <div className="info text-left">{data?.companyInfo?.[lang]}</div>
+            <div className="company-img-slide">
+
+            <span className="prev btn" onClick={() => companyRef?.current?.prev()}><i className="icon-chevron-left"></i></span>
+            <span className="next btn" onClick={() => companyRef?.current?.next()}><i className="icon-chevron-right"></i></span>
+            <Carousel ref={companyRef} autoplay dots={true} className="company-list">
               {
                 data?.companyImgNames?.map((item: any) => <div key={item}><img src={imgList(item)} /></div>)
               }
             </Carousel>
+            </div>
           </div>
         </div>
       </div>
@@ -92,14 +100,14 @@ const App = () => {
             {
               data?.productLists?.map((item: any, index: number) => <Col key={index} lg={{ span: 8 }} xs={{ span: 24 }}>
                 <div className="item">
-                <Card
-                  bordered={false}
-                  cover={<img alt="example" width="100%" src={imgList(item.imgName)} />}
-                >
-                  <Meta 
-                  title={<div className="fs-20">{item?.title?.[lang]}</div>} 
-                  description={<div className="fs-16">{item?.info?.[lang]}</div>} />
-                </Card>
+                  <Card
+                    bordered={false}
+                    cover={<img alt="example" width="100%" src={imgList(item.imgName)} />}
+                  >
+                    <Meta
+                      title={<div className="fs-20">{item?.title?.[lang]}</div>}
+                      description={<div className="fs-16">{item?.info?.[lang]}</div>} />
+                  </Card>
                 </div>
               </Col>)
             }
@@ -236,20 +244,20 @@ const App = () => {
       <div className="card culture bg-gray">
         <div className="w1440">
           <h1>{data?.cultureTitle?.[lang]}</h1>
-          <div className="culture-list">
+          <div className="culture-list culture-section">
             <div className="info">{data?.cultureInfo?.[lang]}</div>
             <div className="pt-30">
-            <Image.PreviewGroup>
-              <Row gutter={[20, 20]}>
-                {data?.cultureImgNames?.map((item: any) => <Col key={item} span={6}>
-                  <Image
-                    width={'100%'}
-                    src={imgList(item)}
-                  />
-                </Col>)}
+              <Image.PreviewGroup>
+                <Row gutter={[20, 20]}>
+                  {data?.cultureImgNames?.map((item: any) => <Col key={item} span={6}>
+                    <Image
+                      width={'100%'}
+                      src={imgList(item)}
+                    />
+                  </Col>)}
 
-              </Row>
-            </Image.PreviewGroup>
+                </Row>
+              </Image.PreviewGroup>
             </div>
           </div>
         </div>
